@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://duwo8nu1mtenu"]
+
+[ext_resource type="Script" path="res://BulletNode.gd" id="1_eco2i"]
+[ext_resource type="Texture2D" uid="uid://cv50beh4lad1e" path="res://SpaceShooterAssets/SpaceShooterAssetPack_Projectiles.png" id="2_df66m"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_r8gyw"]
+radius = 5.0
+
+[node name="bullet_node" type="CharacterBody2D" groups=["bullet"]]
+script = ExtResource("1_eco2i")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+z_index = 1
+position = Vector2(0, -1)
+scale = Vector2(2.83333, 1.875)
+texture = ExtResource("2_df66m")
+hframes = 7
+vframes = 10
+frame = 7
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -1)
+shape = SubResource("CircleShape2D_r8gyw")

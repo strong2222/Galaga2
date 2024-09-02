@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://cfgr1f3drkdrx"]
+
+[ext_resource type="Texture2D" uid="uid://b6w06mh6d16gf" path="res://SpaceShooterAssets/SpaceShooterAssetPack_BackGrounds.png" id="1_krvn7"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_w7c68"]
+texture = ExtResource("1_krvn7")
+texture_region_size = Vector2i(128, 256)
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_17olb"]
+sources/0 = SubResource("TileSetAtlasSource_w7c68")
+
+[node name="TileMap" type="TileMap"]
+position = Vector2(-3, 67)
+tile_set = SubResource("TileSet_17olb")
+format = 2
+layer_0/tile_data = PackedInt32Array(196612, 0, 0, 196620, 0, 0, 196628, 0, 0, 196636, 0, 0, 196635, 0, 0, 196644, 0, 0, 196647, 0, 0, 196653, 0, 0, 983044, 0, 0, 983052, 0, 0, 983059, 0, 0, 983066, 0, 0, 983073, 0, 0, 983081, 0, 0, 983087, 0, 0, 196655, 0, 0, 1572868, 0, 0, 1572876, 0, 0, 1572884, 0, 0, 1572892, 0, 0, 1572900, 0, 0, 1572907, 0, 0, 1572911, 0, 0, 1835012, 0, 0, 1835020, 0, 0, 1835028, 0, 0, 1835034, 0, 0, 1835040, 0, 0, 1835047, 0, 0, 1835055, 0, 0, 196663, 0, 0, 196671, 0, 0, 196676, 0, 0, 1114167, 0, 0, 1114174, 0, 0, 1179716, 0, 0, 1835061, 0, 0, 1835068, 0, 0, 1835076, 0, 0)

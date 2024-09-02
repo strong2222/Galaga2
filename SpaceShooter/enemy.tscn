@@ -1,0 +1,35 @@
+[gd_scene load_steps=5 format=3 uid="uid://bmo32c7snvp7h"]
+
+[ext_resource type="Script" path="res://enemy.gd" id="1_e2p37"]
+[ext_resource type="Texture2D" uid="uid://ckt01xkndn2y8" path="res://SpaceShooterAssets/SpaceShooterAssetPack_Ships.png" id="1_tbnhr"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ac5fp"]
+radius = 13.0384
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_tqf83"]
+radius = 166.048
+
+[node name="Enemy" type="CharacterBody2D"]
+z_index = 1
+script = ExtResource("1_e2p37")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(1.42109e-14, -3)
+scale = Vector2(5.35625, -4.13281)
+texture = ExtResource("1_tbnhr")
+hframes = 10
+vframes = 9
+frame = 17
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visibility_layer = 0
+position = Vector2(0, 2)
+shape = SubResource("CircleShape2D_ac5fp")
+
+[node name="attack_range" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="attack_range"]
+shape = SubResource("CircleShape2D_tqf83")
+
+[connection signal="body_entered" from="attack_range" to="." method="in_attack_range"]
+[connection signal="body_exited" from="attack_range" to="." method="out_attack_range"]

@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://ciseki1w31u75"]
+
+[ext_resource type="Script" path="res://player.gd" id="1_2mth5"]
+[ext_resource type="Texture2D" uid="uid://ckt01xkndn2y8" path="res://SpaceShooterAssets/SpaceShooterAssetPack_Ships.png" id="1_abgp8"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_nbr4o"]
+
+[node name="Player" type="CharacterBody2D" groups=["player"]]
+z_index = 1
+script = ExtResource("1_2mth5")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(1, 1)
+scale = Vector2(3.21875, 3.26563)
+texture = ExtResource("1_abgp8")
+hframes = 10
+vframes = 10
+frame = 1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1, 1)
+shape = SubResource("CircleShape2D_nbr4o")

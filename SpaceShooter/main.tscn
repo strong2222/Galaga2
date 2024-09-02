@@ -1,0 +1,20 @@
+[gd_scene load_steps=5 format=3 uid="uid://pmbgvhj75n1i"]
+
+[ext_resource type="PackedScene" uid="uid://cfgr1f3drkdrx" path="res://background.tscn" id="1_3k1mc"]
+[ext_resource type="Script" path="res://main.gd" id="1_05ywm"]
+[ext_resource type="PackedScene" uid="uid://ciseki1w31u75" path="res://player.tscn" id="2_71iyb"]
+[ext_resource type="PackedScene" uid="uid://2yr44crgom7u" path="res://game_controler.tscn" id="4_6yeks"]
+
+[node name="MAIN" type="Node2D"]
+script = ExtResource("1_05ywm")
+
+[node name="Player" parent="." instance=ExtResource("2_71iyb")]
+position = Vector2(752, 333)
+
+[node name="Background" parent="." instance=ExtResource("1_3k1mc")]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(580, 325)
+
+[node name="EnemyControler" parent="." instance=ExtResource("4_6yeks")]
+position = Vector2(-81, -59)
